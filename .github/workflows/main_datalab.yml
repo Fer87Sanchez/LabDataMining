@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'datalab'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D3DE6499B97840B6A5331960469C4349 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_41CD5C1B754B42E7A07CF4AFCC6ADB5A }}
