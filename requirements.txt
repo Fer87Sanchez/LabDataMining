@@ -5,4 +5,4 @@ joblib
 pydantic
 pandas
 scikit-learn
-
+gunicorn
