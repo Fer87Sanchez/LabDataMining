@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copia el archivo de requerimientos y el código de la app a /app
-COPY requirements.txt .
+COPY requirements.txt . 
 COPY app.py .
 
 # Instala las dependencias
@@ -17,5 +17,6 @@ COPY random_forest_model.joblib /app/random_forest_model.joblib .
 # Expone el puerto 8000 para FastAPI
 EXPOSE 8000
 
-# Comando para iniciar la app
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+# Comando para iniciar la app con gunicorn y uvicorn.worker
+CMD ["gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "app:app", "--bind", "0.0.0.0:8000"]
+
