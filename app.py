@@ -10,7 +10,7 @@ label_encoder = joblib.load("label_encoder.joblib")
 # Inicializar la aplicación FastAPI
 app = FastAPI()
 
-# Definir la entrada esperada (puedes ajustarla según las características del modelo)
+# Definir la entrada esperada 
 class CustomerData(BaseModel):
     age: int
     gender: str
@@ -36,7 +36,7 @@ def predict(data: CustomerData):
     # Procesar columnas categóricas como 'gender'
     input_data = pd.get_dummies(input_data, columns=["gender"], drop_first=True)
     
-    # Asegurar que las columnas coinciden con las del modelo entrenado
+    
     missing_cols = set(model.feature_names_in_) - set(input_data.columns)
     for col in missing_cols:
         input_data[col] = 0
