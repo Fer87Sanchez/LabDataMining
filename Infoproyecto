@@ -1,0 +1,19 @@
+Integrantes:
+
+Fernando Sanchez
+Matias Sepulcri 
+
+Url endpoint: datalab-hmb9d9ajbwefc0bz.brazilsouth-01.azurewebsites.net/predict/
+
+Parametros Post Json : 
+{
+  "age": 30,
+  "gender": "Male",
+  "annual_income": 50000,
+  "total_spent": 12000,
+  "avg_purchase_value": 400,
+  "online_activity_score": 85,
+  "loyalty_program": 1,
+  "days_since_last_purchase": 30,
+  "num_site_visits": 15
+}
